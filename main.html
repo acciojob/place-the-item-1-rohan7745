@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        /* CSS styles for the layout */
+        .holder {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: calc(33.33% - 10px);
+            margin: 5px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div class="holder">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+    </div>
 </body>
-
 </html>
